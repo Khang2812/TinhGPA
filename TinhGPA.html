@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <style>
         body {
-            background-color: #f0f0f0; /* Màu xám trắng sáng */
+            background-color: #f0f0f0; 
             font-family: Arial, sans-serif;
             margin: 0;
             text-align: center;
@@ -31,32 +31,31 @@
         }
 
         button {
-        background-color: #f02d2d; /* Màu nền xanh lá */
-        color: white; /* Màu chữ trắng */
-        border: none; /* Loại bỏ viền */
-        padding: 10px 20px; /* Khoảng cách bên trong nút */
-        text-align: center; /* Căn giữa nội dung */
-        text-decoration: none; /* Không có gạch chân */
-        display: inline-block; /* Hiển thị dòng ngang */
-        font-size: 16px; /* Cỡ chữ */
-        border-radius: 5px; /* Bo tròn góc nút */
-        cursor: pointer; /* Thay đổi con trỏ khi di chuột */
-        box-shadow: 0 4px #8b6767; /* Hiệu ứng bóng dưới nút */
-        transition: 0.3s; /* Hiệu ứng mượt khi thay đổi */
+        background-color: #f02d2d;
+        color: white; 
+        border: none; 
+        padding: 10px 20px; 
+        text-align: center; 
+        text-decoration: none; 
+        display: inline-block; 
+        font-size: 16px;
+        border-radius: 5px; 
+        cursor: pointer; 
+        box-shadow: 0 4px #8b6767; 
+        transition: 0.3s; 
         }
 
         button:hover {
-            background-color: #810505fa; /* Màu khi hover */
+            background-color: #810505fa; 
         }
 
         button:active {
-            box-shadow: 0 2px #bd5656; /* Bóng khi nhấn */
-            transform: translateY(2px); /* Hiệu ứng nhấn nút */
+            box-shadow: 0 2px #bd5656; 
+            transform: translateY(2px); 
         }
 
-        /* Màu sắc riêng cho từng loại nút */
         button.add-row {
-            background-color: #007bff; /* Xanh dương */
+            background-color: #007bff; 
             box-shadow: 0 4px #0056b3;
         }
 
@@ -65,7 +64,7 @@
         }
 
         button.calculate-gpa  {
-            background-color: #ffc107; /* Vàng */
+            background-color: #ffc107;
             box-shadow: 0 4px #d39e00;
         }
 
@@ -74,33 +73,33 @@
         }
 
         button.import-excel {
-        background-image: linear-gradient(to right, #2196F3, #9c27b0); /* Gradient từ xanh biển sang tím */
-        color: white; /* Màu chữ trắng */
-        border: none; /* Loại bỏ viền */
-        padding: 10px 20px; /* Khoảng cách bên trong nút */
-        text-align: center; /* Căn giữa nội dung */
-        text-decoration: none; /* Không có gạch chân */
-        display: inline-block; /* Hiển thị dòng ngang */
-        font-size: 16px; /* Cỡ chữ */
-        border-radius: 5px; /* Bo tròn góc nút */
-        cursor: pointer; /* Thay đổi con trỏ khi di chuột */
-        box-shadow: 0 4px #6a1b9a; /* Hiệu ứng bóng dưới nút */
-        transition: 0.3s; /* Hiệu ứng mượt khi thay đổi */
+        background-image: linear-gradient(to right, #2196F3, #9c27b0); 
+        color: white; 
+        border: none; 
+        padding: 10px 20px; 
+        text-align: center; 
+        text-decoration: none; 
+        display: inline-block; 
+        font-size: 16px; 
+        border-radius: 5px; 
+        cursor: pointer;
+        box-shadow: 0 4px #6a1b9a; 
+        transition: 0.3s; 
         }
 
         button.import-excel:hover {
-            background-image: linear-gradient(to right, #9c27b0, #e91e63, #ff9800, #ffc107); /* Gradient khi hover từ tím - hồng - cam - vàng */
+            background-image: linear-gradient(to right, #9c27b0, #e91e63, #ff9800, #ffc107); 
         }
 
         button.import-excel:active {
-            box-shadow: 0 2px #6a1b9a; /* Bóng khi nhấn */
-            transform: translateY(2px); /* Hiệu ứng nhấn nút */
+            box-shadow: 0 2px #6a1b9a; 
+            transform: translateY(2px); 
         }
 
 
 
         button.export-excel {
-            background-color: #0fa516; /* Đỏ */
+            background-color: #0fa516; 
             box-shadow: 0 4px #096b00;
         }
 
@@ -108,89 +107,83 @@
             background-color: #27bd33;
         }
 
-        /* Tổng quan footer */
-footer {
-    background-color: #2c3e50;
-    color: white;
-    padding: 40px 0;
-    font-family: Arial, sans-serif;
-    width: 100%;
-}
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 0;
+            font-family: Arial, sans-serif;
+            width: 100%;
+        }
 
-/* Footer container */
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-/* Logo */
-.footer-logo img {
-    width: 120px;
-    height: auto;
-}
+        .footer-logo img {
+            width: 120px;
+            height: auto;
+        }
 
-/* Liên kết */
-.footer-links ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    padding-left: 0;
-}
+        .footer-links ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            padding-left: 0;
+        }
 
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
 
-.footer-links a:hover {
-    color: #3498db;
-}
+        .footer-links a:hover {
+            color: #3498db;
+        }
 
-/* Mạng xã hội */
-.footer-socials {
-    display: flex;
-    gap: 15px;
-}
+        .footer-socials {
+            display: flex;
+            gap: 15px;
+        }
 
-.footer-socials .social-icon {
-    color: white;
-    font-size: 20px;
-    transition: color 0.3s ease;
-}
+        .footer-socials .social-icon {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
 
-.footer-socials .social-icon:hover {
-    color: #3498db;
-}
+        .footer-socials .social-icon:hover {
+            color: #3498db;
+        }
 
-/* Footer dưới */
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 12px;
-}
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+        }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
 
-    .footer-links ul {
-        flex-direction: column;
-        margin-top: 20px;
-    }
+            .footer-links ul {
+                flex-direction: column;
+                margin-top: 20px;
+            }
 
-    .footer-socials {
-        margin-top: 20px;
-    }
-}
+            .footer-socials {
+                margin-top: 20px;
+            }
+        }
 
 
 
@@ -321,7 +314,7 @@ footer {
                 const sheet = XLSX.utils.sheet_to_json(workbook.Sheets[firstSheetName], { header: 1 });
 
                 const table = document.getElementById('subjects');
-                table.innerHTML = ""; // Clear existing data
+                table.innerHTML = ""; 
 
                 sheet.slice(1).forEach((row, index) => {
                     const [stt, subjectName, grade, , credits] = row;
